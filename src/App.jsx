@@ -1,11 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import HospitalView from './pages/HospitalView';
+import SOSButton from './components/SOSButton';
+import Navbar from './components/Navbar';
+
 function App() {
   return (
-    <div className="h-screen bg-blue-600 flex items-center justify-center">
-      <div className="bg-white p-10 rounded-2xl shadow-2xl text-center">
-        <h1 className="text-4xl font-bold text-blue-600">CareSync Ready 🚀</h1>
-        <p className="text-gray-500 mt-2">Tailwind v4 is working!</p>
+    <Router>
+      <div className="min-h-screen bg-gray-50 pb-20">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/hospitals" element={<HospitalView />} />
+          <Route path="/sos" element={<SOSButton />} />
+        </Routes>
+        <Navbar />
       </div>
-    </div>
-  )
+    </Router>
+  );
 }
-export default App
+
+export default App;
