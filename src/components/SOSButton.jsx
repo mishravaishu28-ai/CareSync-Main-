@@ -1,15 +1,15 @@
-import { AlertCircle } from 'lucide-react';
-
-const SOSButton = () => {
+// src/pages/sosbutton/SOSButton.jsx
+const SOSButton = ({ onActivate }) => {
   return (
-    <div className="p-4 border-2 border-dashed border-red-300 rounded-lg text-center">
-      <h3 className="text-red-600 font-bold mb-2">Shivam: SOS Logic Yahan Likho</h3>
-      <button className="bg-red-600 text-white px-6 py-3 rounded-full flex items-center gap-2 mx-auto hover:bg-red-700 transition-all">
-        <AlertCircle size={24} />
-        Send SOS
+    <div className="relative -mt-14">
+      <div className="absolute inset-0 bg-rose-200 rounded-full animate-ping opacity-30"></div>
+      <button 
+        onClick={onActivate} // This connects to handleSOSClick in the Dashboard
+        className="relative w-24 h-24 bg-rose-500 text-white rounded-full flex items-center justify-center shadow-xl border-8 border-white active:scale-90 transition-all"
+      >
+        <span className="text-2xl font-black tracking-tighter">SOS</span>
       </button>
     </div>
   );
 };
-
 export default SOSButton;
