@@ -144,7 +144,7 @@ const HealthForm = ({ onComplete }) => {
             />
           </div>
 
-          {/* Optional Sections with the same styling */}
+          {/* Allergies */}
           <div className="space-y-4 pt-2">
             <div>
               <label className={`${labelStyle} text-slate-400`}>Allergies (Optional)</label>

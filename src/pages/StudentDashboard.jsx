@@ -118,7 +118,7 @@ const StudentDashboard = ({ user, setUser }) => {
               </div>
               <p className="text-xs font-bold text-slate-600 italic text-center bg-[#F0F9F7] p-5 rounded-3xl border border-teal-300">"{quote}"</p>
             </div>
-            {/* NEAREST HOSPITAL (NEW OPTION) */}
+            {/* NEAREST HOSPITAL */}
             <div onClick={findNearestHospital} className="bg-white p-6 rounded-[2.5rem] border-2 border-teal-200 shadow-sm flex items-center justify-between active:scale-95 transition-all">
                <div className="flex items-center gap-4">
                   <span className="text-4xl bg-teal-50 p-3 rounded-2xl">🏥</span>
@@ -132,8 +132,9 @@ const StudentDashboard = ({ user, setUser }) => {
 
             {/* Breathing */}
             <div className="bg-white rounded-[3rem] p-6 shadow-sm border border-teal-300">
+
               <div className="flex items-center gap-3 mb-4"><span className="text-2xl">🧘</span><p className="font-black text-slate-700 text-xs uppercase">Guided Breathing</p></div>
-              <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJid2Y4ZzRyeGZ5ZzRyeGZ5ZzRyeGZ5ZzRyeGZ5ZzRyeGZ5JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKuXzhSUIjGyzpS/giphy.gif" className="w-full h-32 object-cover rounded-4xl mb-4" />
+              <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJid2Y4ZzRyeGZ5ZzRyeGZ5ZzRyeGZ 5ZzRyeGZ5ZzRyeGZ5JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKuXzhSUIjGyzpS/giphy.gif" className="w-full h-32 object-cover rounded-4xl mb-4" />
               <p className="text-[10px] text-slate-500 text-center font-bold uppercase tracking-tighter">Inhale 4s ... Hold 4s ... Exhale 4s</p>
             </div>
 
@@ -241,4 +242,4 @@ const StudentDashboard = ({ user, setUser }) => {
   );
 };
 
-export default StudentDashboard;
+export default StudentDashboard;    
