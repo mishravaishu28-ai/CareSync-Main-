@@ -1,1 +1,81 @@
 @import "tailwindcss";
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@layer base {
+  * { 
+    -webkit-tap-highlight-color: transparent; 
+  }
+
+  html {
+    background-color: #0f1923;
+    color: #e8f1f8;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { 
+    background: #243548; 
+    border-radius: 999px; 
+  }
+
+  input, textarea, select {
+    color: #e8f1f8;
+    background-color: #1d2e3f;
+    border-color: #243548;
+  }
+  input::placeholder, textarea::placeholder { color: #4d6a82; }
+  input:focus, textarea:focus, select:focus { outline: none; }
+  select option { background-color: #1d2e3f; color: #e8f1f8; }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(22, 34, 48, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #3d9b96, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ✅ FIXED ACTIVE SCALE LOGIC */
+  .active-scale {
+    transition-property: transform;
+    transition-duration: 150ms;
+  }
+  .active-scale:active {
+    transform: scale(0.95);
+  }
+
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+  }
+
+  .safe-bottom { 
+    padding-bottom: env(safe-area-inset-bottom, 16px); 
+  }
+}
+
+/* Shimmer Animation Definition */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-card {
+  background: linear-gradient(90deg, #162230 0%, #1d2e3f 50%, #162230 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
