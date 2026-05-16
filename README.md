@@ -66,13 +66,13 @@ Git clone (https://github.com/mishravaishu28-ai/CareSync-Main-.git)
 
 | File/Folder | Responsibility | Managed By |
 | :--- | :--- | :--- |
-| **`.env`** | Storing secret keys securely. | **Vaishnavi & Shivam** |
-| **`src/components/`** | Creating UI elements (SOS button, Navbar). | **Harsh** |
-| **`src/pages/`** | Building full-page layouts and views. | **Harsh** |
+| **`src/components/`** | Creating UI elements (SOS button, Navbar). | **Vaishnavi** |
+| **`src/pages/`** | Building Student Dashboard, HealthChat layouts and views. | **Vaishnavi** |
+| **`src/pages/`** | Building Authentication and access Management layouts and views. | **Harsh** |
 | **`src/utils/firebaseConfig.js`**| Database connection & Auth logic. | **Shivam** |
 | **`src/utils/geminiApi.js`** | AI Prompt design & API calls. | **Vaishnavi** |
-| **All code files** | Security review & QA testing. | **Sankalp** |
-| **`src/pages/HospitalView.jsx`**| Emergency log display & logistics. | **Tushar** |
+| **All code files** | health form developmemt. | **Sankalp** |
+| **`src/pages/HospitalView.jsx`**| Hospital Dashboard Development. | **Tushar** |
 
 # React + Vite
 
