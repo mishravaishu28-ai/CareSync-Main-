@@ -1,9 +1,9 @@
 # CareSync-Main-
 🚀 CareSync Platform
-AI-Powered Student Crisis Detection & Emergency Response System.
+AI-Powered Student Health Emergency Response System.
 
 📌 Project Overview
-HealthSync is a Progressive Web App (PWA) designed to manage mental and physical health emergencies for students. The platform leverages the Google Gemini AI (1.5 Flash) to analyze student distress signals for suicide risk or self-harm and triggers immediate alerts to the nearest hospitals and emergency contacts.
+HealthSync is a Progressive Web App (PWA) designed to manage health emergencies for students. An AI Powered Real Time Emergency Respomse and Student Wellness Platform 
 
 🛠️ Tech Stack
 Frontend: React.js (Vite)
@@ -21,15 +21,15 @@ Icons: Lucide React
 Notifications: Web Push API 
 
 👥 Team & Roles
-Vaishnavi (Lead): AI Logic, Prompt Engineering, and API Integration, System Architect, AI-UX Strategist (Full-Stack Integrator)
+Vaishnavi (Lead): Project leader, Student Dashboard Developer and Frontend Architect.
 
-Harsh: Lead Frontend Development (UI/UX) Specialist and PWA Configuration.
+Harsh: Authentication and access Management.
 
-Sankalp: Data Security Lead & QA Analyst.
+Sankalp: Health Documentation and Forms.
 
-Shivam: Backend Infrastructure Lead & Cloud Architect.
+Shivam: Backend and Database Developer.
 
-Tushar: Response Systems Lead & Systems Engineer. 
+Tushar: Hospital Dashboard Developer.
 
 ## 📂 Project Structure
 ```text
@@ -44,15 +44,16 @@ healthsync-platform/
     ├── components/     # Reusable UI components
     │   ├── SOSButton.jsx
     │   ├── Navbar.jsx
-    │   └── ChatInterface.jsx
     ├── pages/          # Full page components
     │   ├── Dashboard.jsx
     │   ├── Login.jsx
-    │   └── HospitalView.jsx
+    │   └── HospitalDashboard.jsx
+    │   └── HealthForm.jsx
+    │   └── HealthChat.jsx
     ├── utils/          # Helper functions and configurations
-    │   ├── firebaseConfig.js # Firebase setup (Shivam's work)
-    │   └── geminiApi.js      # Gemini prompt logic (Vaishnavi's work)
-    ├── hooks/          # Custom React hooks (for API calls)
+    │   ├── firebaseConfig.js # Firebase setup 
+    │   └── geminiApi.js      # Gemini prompt logic 
+    ├── hooks/          # Custom React hooks 
     ├── App.jsx         # Main App component
     └── main.jsx        # Entry point
 ```
@@ -65,11 +66,27 @@ Git clone (https://github.com/mishravaishu28-ai/CareSync-Main-.git)
 
 | File/Folder | Responsibility | Managed By |
 | :--- | :--- | :--- |
-| **`.env`** | Storing secret keys securely. | **Vaishnavi & Shivam** |
-| **`src/components/`** | Creating UI elements (SOS button, Navbar). | **Harsh** |
-| **`src/pages/`** | Building full-page layouts and views. | **Harsh** |
+| **`src/components/`** | Creating UI elements (SOS button, Navbar). | **Vaishnavi** |
+| **`src/pages/`** | Building Student Dashboard, HealthChat layouts and views. | **Vaishnavi** |
+| **`src/pages/`** | Building Authentication and access Management layouts and views. | **Harsh** |
 | **`src/utils/firebaseConfig.js`**| Database connection & Auth logic. | **Shivam** |
 | **`src/utils/geminiApi.js`** | AI Prompt design & API calls. | **Vaishnavi** |
-| **All code files** | Security review & QA testing. | **Sankalp** |
-| **`src/pages/HospitalView.jsx`**| Emergency log display & logistics. | **Tushar** |
+| **All code files** | health form developmemt. | **Sankalp** |
+| **`src/pages/HospitalView.jsx`**| Hospital Dashboard Development. | **Tushar** |
 
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
